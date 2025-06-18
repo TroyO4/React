@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './Navbar.css';
@@ -9,17 +9,33 @@ const Navbar = () => {
 
   const linkStyle = (path) => (location.pathname === path ? 'active' : '');
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // You can adjust this threshold to your liking
+      if (window.scrollY > 5) {
+        setHover(true);
+      } else {
+        setHover(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup on unmount
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <nav
       className="navbarContainer"
       style={{
         position: 'relative',
-        opacity: 0.9,
+        opacity: 1,
         backdropFilter: 'blur(5px)',
         padding: '1rem 2rem',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between', // adjust this if you want center alignment
+        justifyContent: 'space-between',
       }}
     >
       {/* Gradient background overlay */}
