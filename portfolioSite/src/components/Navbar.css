@@ -1,0 +1,34 @@
+.navbarContainer {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.link1 {
+  position: absolute;
+  left: 20px;
+  font-family: Snell Roundhand, cursive;
+  font-size: 2rem;
+}
+
+.centerLinks {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  z-index: 0;
+}
+
+.link {
+  padding: 15px;
+  text-align: center;
+  font-family: cursive;
+  font-size: 1.4rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

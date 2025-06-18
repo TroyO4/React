@@ -1,35 +1,68 @@
-import React from 'react';
-import './Navbar.css';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import './Navbar.css';
 
 const Navbar = () => {
   const location = useLocation();
+  const [hover, setHover] = useState(false);
+
+  const linkStyle = (path) => (location.pathname === path ? 'active' : '');
 
   return (
-    <div className="navbarContainer">
-      <div className="Home">
-        <Link
-          to="/home"
-          className={location.pathname === '/home' ? 'active' : ''}
-        >
-          <h2 className="navbarText">TO</h2>
-        </Link>
+    <nav
+      className="navbarContainer"
+      style={{
+        position: 'relative',
+        opacity: 0.9,
+        backdropFilter: 'blur(5px)',
+        padding: '1rem 2rem',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between', // adjust this if you want center alignment
+      }}
+    >
+      {/* Gradient background overlay */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: hover ? 1 : 0 }}
+        transition={{ duration: 0.7, ease: 'easeInOut' }}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background:
+            'radial-gradient(circle, rgba(0,169,207,1) 0%, rgba(0,169,207,0.4) 60%, transparent 100%)',
+          pointerEvents: 'none',
+          zIndex: 0,
+        }}
+      />
+      <Link to="/home" className={`link1 ${linkStyle('/home')}`}>
+        Troy O'Connor
+      </Link>
 
+      <div className="centerLinks">
         <Link
           to="/about"
-          className={location.pathname === '/about' ? 'active' : ''}
+          className={`link ${linkStyle('/about')}`}
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
         >
-          <h2 className="navbarText">Get to Know Me</h2>
+          Get to Know Me
         </Link>
-
         <Link
           to="/projects"
-          className={location.pathname === '/project' ? 'active' : ''}
+          className={`link ${linkStyle('/projects')}`}
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
         >
-          <h2 className="navbarText">My Artpieces</h2>
+          My Artpieces
         </Link>
       </div>
-    </div>
+    </nav>
   );
 };
+
 export default Navbar;
