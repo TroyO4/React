@@ -1,0 +1,44 @@
+.navbarContainer {
+  background-color: goldenrod;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 80px;
+}
+
+.outerLinks {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 20vw;
+  z-index: 0;
+}
+
+.link {
+  padding: 15px;
+  text-align: center;
+  font-family: cursive;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: rgb(0, 0, 136);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.logo img {
+  height: 80px;
+  width: 140px;
+  margin-top: 0.5vh;
+}
