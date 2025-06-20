@@ -1,0 +1,86 @@
+.homeCont {
+  background-color: antiquewhite;
+  height: 100%;
+  width: 100vw;
+  z-index: -999;
+  position: relative;
+}
+
+/*Title Styling*/
+.titleCont {
+  position: relative;
+  left: 0;
+  padding: 10vh;
+  display: flex;
+}
+
+.titleCont h1 {
+  width: 700px;
+  font-size: 5rem;
+}
+
+.titleCont h2 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+  display: block;
+  padding-left: 15px;
+}
+
+.titleText {
+  width: 38vw;
+  margin-top: 13vh;
+  border-bottom: solid;
+}
+
+.titleText h1,
+.titleText h2 {
+  margin-left: 40px;
+}
+
+.roca {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+}
+
+.constLLC {
+  margin: 0;
+  padding: 0;
+  line-height: 0.8;
+  display: block;
+}
+
+.video {
+  position: absolute;
+  height: 75vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 85%;
+  border: solid;
+  border-bottom-width: 4px;
+}
+
+/*Body Styling*/
+.bodyCont {
+  margin-top: 30vh;
+  font-size: 1.5rem;
+  width: 100vw;
+}
+
+.bodyCont p {
+  width: 60vw;
+  height: auto;
+  word-wrap: break-word; /* optional: helps break long words */
+}
+
+/*Small Screen*/
+@media (max-width: 768px) {
+  .titleCont h1 {
+    font-size: 3rem;
+  }
+}
