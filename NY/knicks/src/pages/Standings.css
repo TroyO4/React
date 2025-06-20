@@ -1,0 +1,33 @@
+.standings-container {
+  position: absolute;
+  top: 13.5vh;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 13.5vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.standings-table {
+  border-collapse: collapse;
+  width: 60%;
+  max-width: 800px;
+}
+
+.standings-table th, .standings-table td {
+  border: 2px solid #ff6600;
+  padding: 10px;
+  text-align: center;
+}
+
+.standings-table th {
+  background-color: #0033cc;
+  color: white;
+}
+
+.standings-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
