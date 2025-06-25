@@ -1,15 +1,30 @@
 import { Link, useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
   const location = useLocation();
+  const [scroller, setScroller] = useState(false);
 
   const linkStyle = (path) => (location.pathname === path ? 'active' : '');
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroller(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="navbarContainer">
-      <Link to="/" className={`logo ${linkStyle('/home')}`}>
-        <img src="/images/Logo2.png" />
+    <nav className={`navbarContainer ${scroller ? 'scrolled' : ''}`}>
+      <Link
+        to="/"
+        className={`logo ${linkStyle('/home')} ${scroller ? 'scrolled' : ''}`}
+      >
+        <img className="logo2" src="/images/Logo2.png" alt="Logo" />
       </Link>
 
       <div className="outerLinks">
@@ -23,7 +38,7 @@ const Navbar = () => {
           Services
         </Link>
         <Link to="/" className={`link ${linkStyle('/')}`}>
-          Services
+          Home
         </Link>
       </div>
     </nav>

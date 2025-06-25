@@ -16,10 +16,18 @@ const Home = () => {
       </div>
 
       <div className="bodyCont">
-        <h1>Recent Projects</h1>
-        <p>
-          sdfsdddsfafrfnjfkhiufbkbciubciubciufbiubfciudbciubiucakgfbiuldksgaufgbkerugfsdbk,gfbek,sfbiskfbliusfkbiksbflibsdfsdddsfafrfnjfkhiufbkbciubciubciufbiubfciudbciubiucakgfbiuldksgaufgbkerugfsdbk,gfbek,sfbiskfbliusfkbiksbflibsdfsdddsfafrfnjfkhiufbkbciubciubciufbiubfciudbciubiucakgfbiuldksgaufgbkerugfsdbk,gfbek,sfbiskfbliusfkbiksbflibsdfsdddsfafrfnjfkhiufbkbciubciubciufbiubfciudbciubiucakgfbiuldksgaufgbkerugfsdbk,gfbek,sfbiskfbliusfkbiksbflibsdfsdddsfafrfnjfkhiufbkbciubciubciufbiubfciudbciubiucakgfbiuldksgaufgbkerugfsdbk,gfbek,sfbiskfbliusfkbiksbflibsdfsdddsfafrfnjfkhiufbkbciubciubciufbiubfciudbciubiucakgfbiuldksgaufgbkerugfsdbk,gfbek,sfbiskfbliusfkbiksbflibsdfsdddsfafrfnjfkhiufbkbciubciubciufbiubfciudbciubiucakgfbiuldksgaufgbkerugfsdbk,gfbek,sfbiskfbliusfkbiksbflibsdfsdddsfafrfnjfkhiufbkbciubciubciufbiubfciudbciubiucakgfbiuldksgaufgbkerugfsdbk,gfbek,sfbiskfbliusfkbiksbflibsdfsdddsfafrfnjfkhiufbkbciubciubciufbiubfciudbciubiucakgfbiuldksgaufgbkerugfsdbk,gfbek,sfbiskfbliusfkbiksbflib
-        </p>
+        <div className="bodyTitle">
+          <h1>Recent Projects</h1>
+        </div>
+
+        <div className="body1">
+          <p>
+            sdfsdddsfafrfnjfkhiufbkbciubciubciufbiubfciudbciubiucakgfbiuldksgaufgbkerugfsdbk,gfbek,sfbiskfbliusfkbiksbflibsdfsdddsfafrfnjfkhiufbkbciubciubciufbiubfciudbciubiucakgfbiuldksgaufgbkerugfsdbk,gfbek,sfbiskfbliusfkbiksbflibsdfsdddsfafrfnjfkhiufbkbciubciubciufbiubfciudbciubiucakgfbiuldksgaufgbkerugfsdbk,gfbek,sfbiskfbliusfkbiksbflibsdfsdddsfafrfnjfkhiufbkbciubciubciufbiubfciudbciubiucakgfbiuldksgaufgbkerugfsdbk,gfbek
+          </p>
+          <div className="slideShow">
+            <img src="/images/Logo2.png" className="slidePic" />
+          </div>
+        </div>
       </div>
     </div>
   );
