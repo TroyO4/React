@@ -1,0 +1,91 @@
+.contactCont {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10vh 5vw;
+  background-color: #fff8f0;
+}
+
+.contactTitle {
+  text-align: center;
+  margin-bottom: 4vh;
+}
+
+.contactTitle h1 {
+  font-size: 3rem;
+  color: #003366;
+}
+
+.contactTitle h2 {
+  font-weight: normal;
+  color: #666;
+}
+
+.contactBody {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5vw;
+}
+
+.contactForm {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+  margin-bottom: 2vh;
+  padding: 1vh;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.contactForm button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 1vh;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contactImage img {
+  width: 30vw;
+  border-radius: 12px;
+  transform: rotate(3deg);
+}
+
+/* Animation styles (shared with Home.css) */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  transform: translateX(-50px);
+  opacity: 0;
+}
+
+.fade-in-left.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.fade-in-right {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+.fade-in-right.visible {
+  transform: translateX(0);
+  opacity: 1;
+}

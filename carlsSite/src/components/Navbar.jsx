@@ -10,10 +10,14 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      console.log('Scroll event fired! window.scrollY:', window.scrollY);
       setScroller(window.scrollY > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
+
+    // Call handler once on mount in case page is already scrolled
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -31,13 +35,13 @@ const Navbar = () => {
         <Link to="/about" className={`link ${linkStyle('/about')}`}>
           About Us
         </Link>
-        <Link to="/contact" className={`link ${linkStyle('/projects')}`}>
+        <Link to="/contact" className={`link ${linkStyle('/contact')}`}>
           Contact
         </Link>
         <Link to="/services" className={`link ${linkStyle('/services')}`}>
           Services
         </Link>
-        <Link to="/" className={`link ${linkStyle('/')}`}>
+        <Link to="/home" className={`link ${linkStyle('/home')}`}>
           Home
         </Link>
       </div>

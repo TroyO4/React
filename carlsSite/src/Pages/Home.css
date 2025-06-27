@@ -1,6 +1,5 @@
 .homeCont {
-  background-color: antiquewhite;
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   z-index: -999;
   position: relative;
@@ -9,11 +8,13 @@
 /*Title Styling*/
 .titleCont {
   position: relative;
-  left: 0;
-  padding: 10vh;
+  height: 100vh;
+  width: 100vw;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
-
 .titleCont h1 {
   width: 700px;
   font-size: 5rem;
@@ -55,56 +56,102 @@
 
 .video {
   position: absolute;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   top: 0;
   left: 0;
-  object-fit: cover;
   z-index: -1;
-  opacity: 85%;
-  border: solid;
-  border-bottom-width: 4px;
+  opacity: 0.8;
 }
 
-/*Body Styling--------------------------------------------------------------------------------------------------------------------------*/
-
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-.bodyCont {
-  margin-top: 50vh;
-  font-size: 1.5rem;
-  width: 100%;
-  margin-left: 2vw;
-}
-
-.body1 {
+/* Section Styling */
+.section {
   display: flex;
-  align-items: flex-start;
-  gap: 20vw;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8vh 10vw;
+  gap: 5vw;
+  flex-wrap: wrap;
+  background-color: #fff;
 }
-.body1 p {
+
+.textBlock {
   flex: 1;
-  max-width: 40%;
-  word-wrap: break-word;
-  margin: 0;
+  min-width: 280px;
 }
 
-.slideShow {
-  flex-shrink: 0;
+.textBlock h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #003366;
 }
 
-.slidePic {
-  height: 30vh;
-  width: 25vw;
+.textBlock p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
 }
 
-/*Small Screen*/
+.imageBlock {
+  width: 30vw;
+  max-width: 400px;
+  min-width: 200px;
+  border-radius: 12px;
+}
+
+/* Optional Rotation for flair */
+.rotateLeft {
+  transform: rotate(-5deg);
+}
+
+.rotateRight {
+  transform: rotate(5deg);
+}
+
+/* Scroll Animation */
+.fade-in,
+.fade-in-left,
+.fade-in-right {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  transform: translateX(-50px);
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  transform: translateX(50px);
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .titleCont h1 {
-    font-size: 3rem;
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imageBlock {
+    width: 80vw;
+  }
+
+  .textBlock h2 {
+    font-size: 1.5rem;
   }
 }
