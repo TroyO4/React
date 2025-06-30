@@ -80,8 +80,12 @@
   border-width: 1px;
 }
 
+.logo img:hover {
+  border: solid white 2px;
+}
+
 .logo.scrolled {
-  border: solid;
+  border: solid 1.5px;
   border-color: black;
   border-bottom: none;
   border-top: none;
