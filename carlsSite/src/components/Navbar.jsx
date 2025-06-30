@@ -43,28 +43,28 @@ const Navbar = () => {
       <div className={`outerLinks ${menuOpen ? 'showMenu' : ''}`}>
         <Link
           to="/about"
-          className={`link ${linkStyle('/about')}`}
+          className={`link about ${linkStyle('/about')}`}
           onClick={() => setMenuOpen(false)}
         >
           About Us
         </Link>
         <Link
           to="/contact"
-          className={`link ${linkStyle('/contact')}`}
+          className={`link contact ${linkStyle('/contact')}`}
           onClick={() => setMenuOpen(false)}
         >
           Contact
         </Link>
         <Link
           to="/services"
-          className={`link ${linkStyle('/services')}`}
+          className={`link services ${linkStyle('/services')}`}
           onClick={() => setMenuOpen(false)}
         >
           Services
         </Link>
         <Link
-          to="/home"
-          className={`link ${linkStyle('/home')}`}
+          to="/"
+          className={`link home ${linkStyle('/')}`}
           onClick={() => setMenuOpen(false)}
         >
           Home
