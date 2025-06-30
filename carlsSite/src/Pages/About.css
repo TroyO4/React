@@ -1,0 +1,192 @@
+/* Container */
+.aboutPageContainer {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #fff8f0;
+  color: #003366;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Title Section */
+.aboutTitleWrapper {
+  position: relative;
+  height: 30vh;
+  width: 100vw;
+  padding-top: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.aboutTitleText {
+  max-width: 600px;
+  border-bottom: 3px solid #003366;
+  border-radius: 15%;
+  padding-bottom: 1vh;
+}
+
+.aboutTitleText h1 {
+  font-size: 3rem;
+  margin: 0 0 0.3rem 0;
+}
+
+.aboutTitleText h2 {
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin: 0.2rem 0;
+}
+
+.aboutRoca {
+  color: #004080;
+}
+
+.aboutConstLLC {
+  color: #003366;
+  font-weight: 400;
+}
+
+/* Section Layout */
+.aboutSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5vw;
+  padding: 8vh 10vw;
+  flex-wrap: wrap;
+  color: #003366;
+}
+
+.aboutTextBlock {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.aboutTextBlock h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.aboutTextBlock p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.aboutImageBlock {
+  flex-shrink: 0;
+  width: 30vw;
+  max-width: 400px;
+  min-width: 200px;
+  border-radius: 12px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+/* Rotation for Flair */
+.aboutRotateLeft {
+  transform: rotate(-5deg);
+}
+
+.aboutRotateRight {
+  transform: rotate(5deg);
+}
+
+/* Scroll Fade-in Animations */
+.aboutFadeIn,
+.aboutFadeInLeft,
+.aboutFadeInRight {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.aboutFadeIn.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.aboutFadeInLeft {
+  transform: translateX(-50px);
+}
+
+.aboutFadeInLeft.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.aboutFadeInRight {
+  transform: translateX(50px);
+}
+
+.aboutFadeInRight.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aboutTitleWrapper {
+    justify-content: center;
+    padding-top: 10vh;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .aboutTitleText {
+    max-width: 90vw;
+    border-bottom: none;
+    border-radius: 0;
+  }
+
+  .aboutTitleText h1 {
+    font-size: 2.8rem;
+  }
+
+  .aboutTitleText h2 {
+    font-size: 1.2rem;
+  }
+
+  .aboutSection {
+    flex-direction: column;
+    padding: 6vh 5vw;
+    text-align: center;
+  }
+
+  .aboutImageBlock {
+    width: 85vw;
+    margin-top: 2rem;
+  }
+
+  .aboutTextBlock h2 {
+    font-size: 1.6rem;
+  }
+
+  .aboutTextBlock p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutTitleText h1 {
+    font-size: 2rem;
+  }
+
+  .aboutTitleText h2 {
+    font-size: 1rem;
+  }
+
+  .aboutTextBlock h2 {
+    font-size: 1.4rem;
+  }
+
+  .aboutTextBlock p {
+    font-size: 0.95rem;
+  }
+
+  .aboutImageBlock {
+    width: 90vw;
+  }
+}
