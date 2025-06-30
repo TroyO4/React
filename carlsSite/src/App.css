@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: fantasy;
+  font-family: 'Times New Roman', sans-serif;
 }
 
 .fade-in {
