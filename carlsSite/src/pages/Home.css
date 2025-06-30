@@ -63,9 +63,14 @@
 }
 
 /* Section Styling */
+.sectionCont {
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+  margin-top: 50vh;
+}
+
 .section {
-  position: relative;
-  top: 70vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -222,6 +227,10 @@
     line-height: 1.4;
     border-bottom: 2px solid;
     border-radius: 30%;
+  }
+
+  .sectionCont {
+    margin-top: 35vh;
   }
 
   .textBlock {
