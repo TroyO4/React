@@ -195,23 +195,60 @@
 }
 
 @media (max-width: 480px) {
-  .titleCont h1 {
-    font-size: 2rem;
+  .titleCont {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10vh 5vw 2vh;
+    text-align: left;
+  }
+
+  .titleText {
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .titleText h1 {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+    padding-left: 10px;
   }
 
   .titleText h2 {
     font-size: 1rem;
+    margin: 0;
+    padding: 0 10px;
+    line-height: 1.4;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+  }
+
+  .textBlock {
+    padding: 2vh 5vw;
+    text-align: left;
   }
 
   .textBlock h2 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
   }
 
   .textBlock p {
     font-size: 0.95rem;
+    line-height: 1.5;
   }
 
   .imageBlock {
-    width: 90vw;
+    width: 100%;
+    max-width: 100%;
+    margin: 2vh 0;
+  }
+
+  .roca,
+  .constLLC {
+    font-size: 1rem;
+    padding-left: 10px;
   }
 }
