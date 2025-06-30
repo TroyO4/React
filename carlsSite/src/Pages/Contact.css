@@ -57,6 +57,7 @@
   width: 30vw;
   border-radius: 12px;
   transform: rotate(3deg);
+  margin-right: 10vw;
 }
 
 /* Animation styles (shared with Home.css) */

@@ -23,10 +23,10 @@ const Home = () => {
 
   return (
     <div className="homeCont">
+      <video autoPlay loop muted playsInline className="video">
+        <source src="/images/constrVid.mp4" type="video/mp4" />
+      </video>
       <div className="titleCont fade-in">
-        <video autoPlay loop muted playsInline className="video">
-          <source src="/images/constrVid.mp4" type="video/mp4" />
-        </video>
         <div className="titleText">
           <h1 className="roca">Roca</h1>
           <h1 className="constLLC">Construction LLC</h1>

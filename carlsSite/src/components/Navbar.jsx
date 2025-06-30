@@ -5,25 +5,23 @@ import './Navbar.css';
 const Navbar = () => {
   const location = useLocation();
   const [scroller, setScroller] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // NEW STATE
 
   const linkStyle = (path) => (location.pathname === path ? 'active' : '');
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log('Scroll event fired! window.scrollY:', window.scrollY);
       setScroller(window.scrollY > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    // Call handler once on mount in case page is already scrolled
     handleScroll();
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <nav className={`navbarContainer ${scroller ? 'scrolled' : ''}`}>
+      {/* Logo */}
       <Link
         to="/"
         className={`logo ${linkStyle('/home')} ${scroller ? 'scrolled' : ''}`}
@@ -31,17 +29,44 @@ const Navbar = () => {
         <img className="logo2" src="/images/Logo2.png" alt="Logo" />
       </Link>
 
-      <div className="outerLinks">
-        <Link to="/about" className={`link ${linkStyle('/about')}`}>
+      {/* Burger icon */}
+      <div
+        className={`burger ${menuOpen ? 'open' : ''}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <div />
+        <div />
+        <div />
+      </div>
+
+      {/* Nav links */}
+      <div className={`outerLinks ${menuOpen ? 'showMenu' : ''}`}>
+        <Link
+          to="/about"
+          className={`link ${linkStyle('/about')}`}
+          onClick={() => setMenuOpen(false)}
+        >
           About Us
         </Link>
-        <Link to="/contact" className={`link ${linkStyle('/contact')}`}>
+        <Link
+          to="/contact"
+          className={`link ${linkStyle('/contact')}`}
+          onClick={() => setMenuOpen(false)}
+        >
           Contact
         </Link>
-        <Link to="/services" className={`link ${linkStyle('/services')}`}>
+        <Link
+          to="/services"
+          className={`link ${linkStyle('/services')}`}
+          onClick={() => setMenuOpen(false)}
+        >
           Services
         </Link>
-        <Link to="/home" className={`link ${linkStyle('/home')}`}>
+        <Link
+          to="/home"
+          className={`link ${linkStyle('/home')}`}
+          onClick={() => setMenuOpen(false)}
+        >
           Home
         </Link>
       </div>
