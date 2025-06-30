@@ -34,10 +34,10 @@ const About = () => {
         <div className="aboutTextBlock aboutFadeInLeft">
           <h2>Our Mission</h2>
           <p>
-            At Roca Construction, we aim to deliver excellence in everything we
-            do — from innovation to execution. Our mission is to build
-            long-lasting relationships by delivering trustworthy, efficient, and
-            cutting-edge solutions tailored to your needs.
+            At Roca Construction, our goal is to deliver excellence in
+            everything we do — from innovation to execution. Our mission is to
+            build long-lasting relationships by delivering trustworthy,
+            efficient, and cutting-edge solutions tailored to your needs.
           </p>
         </div>
         <img
